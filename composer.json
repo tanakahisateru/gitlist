@@ -1,0 +1,13 @@
+{
+    "name": "klaussilveira/gitlist",
+    "authors": [
+        {
+            "name": "Klaus Silveira",
+            "email": "contact@klaussilveira.com"
+        }
+    ],
+    "require": {
+        "twig/twig": ">1.8.0",
+        "silex/silex": "*"
+    }
+}

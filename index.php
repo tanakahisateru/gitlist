@@ -11,17 +11,18 @@ if (empty($config['git']['repositories'])) {
     die("Please, edit the config.ini file and provide your repositories directory");
 }
 
-require_once __DIR__.'/vendor/silex.phar';
+$loader = require_once __DIR__.'/vendor/autoload.php';
 
 $app = new Silex\Application();
 $app['baseurl'] = $config['app']['baseurl'];
 
 // Register Git and Twig libraries
-$app['autoloader']->registerNamespace('Git', __DIR__.'/lib');
-$app['autoloader']->registerNamespace('Application', __DIR__.'/lib');
+//$loader->add('Twig', __DIR__.'/vendor');
+$loader->add('Git', __DIR__.'/lib');
+$loader->add('Application', __DIR__.'/lib');
+
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path'       => __DIR__.'/views',
-    'twig.class_path' => __DIR__.'/vendor',
     'twig.options'    => array('cache' => __DIR__.'/cache'),
 ));
 $app->register(new Git\GitServiceProvider(), array(

@@ -19,4 +19,13 @@ class UtilsServiceProvider implements ServiceProviderInterface
             return new Utils;
         };
     }
+
+    /**
+     * Bootstraps the application.
+     *
+     * @param Application $app Silex Application
+     */
+    function boot(Application $app)
+    {
+    }
 }

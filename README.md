@@ -52,6 +52,8 @@ Rename the `config.ini-example` file to `config.ini`. Now open up the `config.in
 
 ```
 cd /var/www/gitlist
+curl -s http://getcomposer.org/installer | php
+php composer.phar install
 mkdir cache
 chmod 777 cache
 ```

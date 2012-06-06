@@ -27,3 +27,7 @@ nbproject
 .idea
 node_modules
 config.ini
+composer.phar
+composer.lock
+vendor
+

@@ -20,4 +20,13 @@ class GitServiceProvider implements ServiceProviderInterface
             return new Client($app['git.client']);
         };
     }
+
+    /**
+     * Bootstraps the application.
+     *
+     * @param Application $app Silex Application
+     */
+    function boot(Application $app)
+    {
+    }
 }
